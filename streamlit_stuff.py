@@ -37,8 +37,7 @@ chart2 = alt.Chart(data).mark_area().encode(
     alt.X('Fare'),
     alt.Y('Age')
 )
-#with st.sidebar:
-  #
+
 with col1:
   st.altair_chart(chart1, use_container_width = True)
 with col2:
@@ -49,5 +48,6 @@ with col3:
 data.sample(10)
 
 #Make a sidebar
-
+with st.sidebar:
+  st.header("This is a sidebar")
 #Make three charts
