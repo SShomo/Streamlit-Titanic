@@ -38,12 +38,18 @@ chart2 = alt.Chart(data).mark_area().encode(
     alt.Y('Age')
 )
 
+chart3 = alt.Chart(data).mark_tick().encode(
+    alt.X('Ticket'),
+    alt.Y("Fare")
+)
+
 with col1:
   st.altair_chart(chart1, use_container_width = True)
 with col2:
     st.altair_chart(chart2, use_container_width = True)
 with col3:
     st.header("This is col 3")
+    st.altair_chart(chart3, use_container_width = True)
 
 data.sample(10)
 
