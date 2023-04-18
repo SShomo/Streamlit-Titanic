@@ -43,8 +43,8 @@ with col1:
   st.altair_chart(chart1, use_container_width = True)
 with col2:
     st.altair_chart(chart2, use_container_width = True)
-#with col3:
-#  pass
+with col3:
+    st.header("This is col 3")
 
 data.sample(10)
 
